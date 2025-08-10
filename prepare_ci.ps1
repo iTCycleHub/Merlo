@@ -23,6 +23,23 @@ dart run build_runner build --delete-conflicting-outputs | Out-Null
 Write-Host "Formateando código..." -ForegroundColor Yellow
 dart format --line-length 80 lib test --exclude="lib/gen/**" | Out-Null
 
+# Ejecutar análisis de código
+Write-Host "Analizando código..." -ForegroundColor Yellow
+$analyzeResult = flutter analyze lib test
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Errores de análisis encontrados. Intentando corrección automática..." -ForegroundColor Yellow
+    dart fix --apply lib test | Out-Null
+    
+    # Verificar de nuevo
+    $analyzeResult = flutter analyze lib test
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Aún hay errores de análisis que requieren corrección manual:" -ForegroundColor Red
+        Write-Host $analyzeResult
+    } else {
+        Write-Host "Errores de análisis corregidos automáticamente" -ForegroundColor Green
+    }
+}
+
 # Verificar estado (solo archivos que se deben versionar)
 $status = git status --porcelain | Where-Object { $_ -notmatch "lib/gen/" }
 if ($status) {
