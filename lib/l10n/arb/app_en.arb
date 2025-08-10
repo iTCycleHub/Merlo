@@ -1,0 +1,30 @@
+{
+  "@@locale": "en",
+  "appTitle": "Merlo",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "counterAppBarTitle": "Counter",
+  "@counterAppBarTitle": {
+    "description": "Text shown in the AppBar of the Counter Page"
+  },
+  "counterButtonText": "Increment",
+  "@counterButtonText": {
+    "description": "Text shown on the counter increment button"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home page title"
+  },
+  "welcome": "Welcome to Merlo",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "description": "Digital platform for comprehensive commercial management",
+  "@description": {
+    "description": "App description"
+  },
+  "invalidEmail": "Invalid Email Address",
+  "invalidPassword": "Password must be at least 8 characters and contain at least one letter and number",
+  "confirmPasswordMismatch": "Password confirmation not match"
+}

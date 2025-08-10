@@ -1,0 +1,30 @@
+{
+  "@@locale": "es",
+  "appTitle": "Merlo",
+  "@appTitle": {
+    "description": "El título de la aplicación"
+  },
+  "counterAppBarTitle": "Contador",
+  "@counterAppBarTitle": {
+    "description": "Texto mostrado en el AppBar de la página de contador"
+  },
+  "counterButtonText": "Incrementar",
+  "@counterButtonText": {
+    "description": "Texto mostrado en el botón de incrementar contador"
+  },
+  "home": "Inicio",
+  "@home": {
+    "description": "Título de la página de inicio"
+  },
+  "welcome": "Bienvenido a Merlo",
+  "@welcome": {
+    "description": "Mensaje de bienvenida"
+  },
+  "description": "Plataforma digital para gestión comercial integral",
+  "@description": {
+    "description": "Descripción de la aplicación"
+  },
+  "invalidEmail": "Dirección de correo electrónico inválida",
+  "invalidPassword": "La contraseña debe tener al menos 8 caracteres y contener al menos una letra y un número",
+  "confirmPasswordMismatch": "La confirmación de contraseña no coincide"
+}
