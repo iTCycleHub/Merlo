@@ -6,9 +6,9 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:flutter/widgets.dart';
-import 'package:merlo/l10n/arb/app_localizations.dart';
+import 'package:merlo/gen/l10n/app_localizations.dart';
 
-export 'package:merlo/l10n/arb/app_localizations.dart';
+export 'package:merlo/gen/l10n/app_localizations.dart';
 
 extension AppLocalizationsX on BuildContext {
   AppLocalizations get l10n => AppLocalizations.of(this);
