@@ -11,7 +11,7 @@ flutter clean | Out-Null
 Write-Host "Instalando dependencias..." -ForegroundColor Yellow  
 flutter pub get | Out-Null
 
-# Generar localizaciones
+# Generar localizaciones (los archivos no se versionan, solo verificamos que funcione)
 Write-Host "Generando localizaciones..." -ForegroundColor Yellow
 flutter gen-l10n | Out-Null
 
@@ -19,18 +19,18 @@ flutter gen-l10n | Out-Null
 Write-Host "Ejecutando build runner..." -ForegroundColor Yellow
 dart run build_runner build --delete-conflicting-outputs | Out-Null
 
-# Formatear código con parámetros exactos del CI
+# Formatear código con parámetros exactos del CI (excluyendo archivos generados)
 Write-Host "Formateando código..." -ForegroundColor Yellow
-dart format --line-length 80 lib test | Out-Null
+dart format --line-length 80 lib test --exclude="lib/gen/**" | Out-Null
 
-# Verificar estado
-$status = git status --porcelain
+# Verificar estado (solo archivos que se deben versionar)
+$status = git status --porcelain | Where-Object { $_ -notmatch "lib/gen/" }
 if ($status) {
     Write-Host "Cambios detectados, preparando commit..." -ForegroundColor Green
     Write-Host $status
     
     git add .
-    git commit -m "chore: regenerar y formatear archivos para consistencia CI/CD"
+    git commit -m "chore: actualizar configuración CI y gitignore para archivos generados"
     
     Write-Host "Cambios listos para push. Ejecuta: git push" -ForegroundColor Green
 } else {
@@ -38,6 +38,7 @@ if ($status) {
 }
 
 Write-Host ""
+Write-Host "Nota: Los archivos de localización ahora se generan automáticamente en CI" -ForegroundColor Cyan
 Write-Host "Para verificar manualmente:" -ForegroundColor Cyan
-Write-Host "   dart format --line-length 80 --set-exit-if-changed lib test"
+Write-Host "   dart format --line-length 80 --set-exit-if-changed lib test --exclude='lib/gen/**'"
 Write-Host ""
