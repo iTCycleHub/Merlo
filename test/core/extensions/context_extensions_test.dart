@@ -3,9 +3,9 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:merlo/core/extensions/context_extensions.dart';
 import 'package:merlo/shared/flash/presentation/blocs/cubit/flash_cubit.dart';
+import 'package:mocktail/mocktail.dart';
 
 // Import the file that contains the extension
 

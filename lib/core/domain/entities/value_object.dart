@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:meta/meta.dart';
 import 'package:merlo/core/domain/failures/errors.dart';
 import 'package:merlo/core/domain/failures/value_failure.dart';
+import 'package:meta/meta.dart';
 
 // ignore: one_member_abstracts
 abstract class IValidatable {
