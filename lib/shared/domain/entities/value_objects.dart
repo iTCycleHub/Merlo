@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 import 'package:dartz/dartz.dart';
 import 'package:merlo/core/domain/entities/value_object.dart';
 import 'package:merlo/core/domain/entities/value_validators.dart';

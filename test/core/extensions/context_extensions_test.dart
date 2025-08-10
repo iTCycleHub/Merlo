@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 // Import the necessary packages
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';

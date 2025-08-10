@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 part of 'flash_cubit.dart';
 
 sealed class FlashState {

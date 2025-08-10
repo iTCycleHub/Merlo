@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 // ignore_for_file: strict_raw_type
 
 import 'package:merlo/core/domain/failures/value_failure.dart';

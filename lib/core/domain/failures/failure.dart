@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 sealed class Failure {
   const Failure();
   const factory Failure.localFailure({required String message}) = LocalFailure;

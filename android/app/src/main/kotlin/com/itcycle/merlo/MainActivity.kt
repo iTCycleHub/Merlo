@@ -1,4 +1,4 @@
-package dev.adryanev.template
+package com.itcycle.merlo
 
 import io.flutter.embedding.android.FlutterActivity
 

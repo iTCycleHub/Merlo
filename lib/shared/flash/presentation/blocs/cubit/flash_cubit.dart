@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 

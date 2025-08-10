@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 // Import the test and freezed_test packages
 import 'package:flutter_test/flutter_test.dart';
 import 'package:merlo/core/domain/failures/failure.dart';

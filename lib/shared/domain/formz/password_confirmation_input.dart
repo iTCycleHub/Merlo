@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 import 'package:formz/formz.dart';
 import 'package:merlo/l10n/l10n.dart';
 

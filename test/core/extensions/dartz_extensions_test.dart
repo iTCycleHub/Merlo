@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 // Import the necessary packages
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';

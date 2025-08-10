@@ -4,7 +4,7 @@ Desarrollo de una plataforma digital integral que facilite la gestión comercial
 
 ## Arquitectura
 
-Este proyecto implementa **Clean Architecture** basado en el template de [flutter-mobile-clean-architecture-template](https://github.com/adryanev/flutter-mobile-clean-architecture-template), proporcionando una estructura escalable y mantenible.
+Este proyecto implementa **Clean Architecture** proporcionando una estructura escalable y mantenible diseñada específicamente para las necesidades de gestión comercial y integración de IA.
 
 ### Estructura del Proyecto
 

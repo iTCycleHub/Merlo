@@ -1,3 +1,7 @@
+// Copyright 2025 iTCycle. All rights reserved.
+// Developed by iTCycle
+// Project: Merlo
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:merlo/shared/domain/formz/password_confirmation_input.dart';
 
