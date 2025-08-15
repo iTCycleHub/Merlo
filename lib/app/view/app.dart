@@ -45,6 +45,7 @@ class App extends StatelessWidget {
           builder: (context, child) {
             return MaterialApp.router(
               scaffoldMessengerKey: rootScaffoldMessengerKey,
+              title: 'Merlo - iTCycle',
               theme: ThemeData(
                 useMaterial3: true,
                 fontFamily: GoogleFonts.poppins().fontFamily,
