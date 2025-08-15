@@ -49,7 +49,7 @@ class _MainLayoutState extends State<MainLayout> {
           ),
         ),
         title: Text(
-          'Door Hub',
+          'Merlo',
           style: AppTextStyles.kBold18.copyWith(
             color: isDarkMode(context) ? AppColors.kWhite : AppColors.kBlack,
           ),
