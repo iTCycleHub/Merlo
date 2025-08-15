@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:merlo/features/counter/counter.dart';
 import 'package:merlo/features/home/home.dart';
+import 'package:merlo/shared/layout/main_layout.dart';
 
 class AppRouter extends Equatable {
   static const home = 'home';
@@ -24,14 +25,12 @@ GoRouter router([String? initialLocation]) => GoRouter(
         GoRoute(
           path: '/',
           name: AppRouter.home,
-          builder: (context, state) => HomePage(
-            drawerKey: GlobalKey<ScaffoldState>(),
-          ),
+          builder: (context, state) => const MainLayout(child: HomePage()),
         ),
         GoRoute(
           path: '/counter',
           name: AppRouter.counter,
-          builder: (context, state) => const CounterPage(),
+          builder: (context, state) => const MainLayout(child: CounterPage()),
         ),
       ],
     );
