@@ -1,10 +1,41 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:itservicepro/features/home/data/offer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/common/containers/primary_container.dart';
 import 'offers_card.dart';
+
+// Modelo temporal para ofertas
+class OfferModel {
+  final String offerOn;
+  final String amount;
+  final Color color;
+
+  OfferModel({
+    required this.offerOn,
+    required this.amount,
+    required this.color,
+  });
+}
+
+// Lista temporal de ofertas
+final List<OfferModel> offerList = [
+  OfferModel(
+    offerOn: "Cleaning Services",
+    amount: "20%",
+    color: Colors.blue,
+  ),
+  OfferModel(
+    offerOn: "Home Repair",
+    amount: "15%",
+    color: Colors.green,
+  ),
+  OfferModel(
+    offerOn: "AC Repair",
+    amount: "25%",
+    color: Colors.orange,
+  ),
+];
 
 class OfferList extends StatelessWidget {
   const OfferList({super.key});

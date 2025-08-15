@@ -19,7 +19,10 @@ class HomeServicesCard extends StatelessWidget {
     return OpenContainer(
         transitionType: ContainerTransitionType.fadeThrough,
         openBuilder: (BuildContext _, VoidCallback openContainer) {
-          return ServicesDetailView(services: service);
+          // TODO: Implementar ServicesDetailView
+          return const Scaffold(
+            body: Center(child: Text('Services Detail - Coming Soon')),
+          );
         },
         middleColor: isDarkMode(context)
             ? AppColors.kDarkSurfaceColor
