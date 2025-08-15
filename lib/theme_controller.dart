@@ -3,6 +3,10 @@
 // Project: Merlo
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+// Instancia global del ThemeController
+final ThemeController globalThemeController = ThemeController();
 
 // Simple ThemeController for Clean Architecture (without GetX dependency)
 class ThemeController extends ChangeNotifier {
@@ -20,12 +24,25 @@ class ThemeController extends ChangeNotifier {
   }
 
   Future<void> getThemeState() async {
-    // Default to light theme
-    return setTheme(ThemeOptions.light);
+    // Cargar tema guardado
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      theme = prefs.getString('theme_mode') ?? ThemeOptions.light;
+      notifyListeners();
+    } catch (e) {
+      theme = ThemeOptions.light;
+    }
   }
 
   Future<void> setTheme(String value) async {
     theme = value;
+    // Guardar tema
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('theme_mode', value);
+    } catch (e) {
+      // Manejar error
+    }
     notifyListeners();
   }
 }

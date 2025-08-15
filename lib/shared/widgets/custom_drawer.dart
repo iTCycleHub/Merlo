@@ -22,7 +22,6 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   int selectedMenu = 0;
-  final ThemeController _themeController = ThemeController();
 
   @override
   Widget build(BuildContext context) {
@@ -183,14 +182,14 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 text: 'Color Scheme',
               ),
               ListenableBuilder(
-                listenable: _themeController,
+                listenable: globalThemeController,
                 builder: (context, child) {
                   return ToggleButton(
                     onDarkModeSelected: () {
-                      _themeController.setTheme(ThemeOptions.dark);
+                      globalThemeController.setTheme(ThemeOptions.dark);
                     },
                     onLightModeSelected: () {
-                      _themeController.setTheme(ThemeOptions.light);
+                      globalThemeController.setTheme(ThemeOptions.light);
                     },
                   );
                 },
