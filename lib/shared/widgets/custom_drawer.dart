@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -33,7 +33,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
           isDarkMode(context) ? AppColors.kDarkInput : AppColors.kPrimary,
       child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: AppSpacing.twentyHorizontal),
+          padding:
+              EdgeInsets.symmetric(horizontal: AppSpacing.twentyHorizontal),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -185,7 +186,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 listenable: globalThemeController,
                 builder: (context, child) {
                   return ToggleButton(
-                    isDarkMode: globalThemeController.themeMode == ThemeMode.dark,
+                    isDarkMode:
+                        globalThemeController.themeMode == ThemeMode.dark,
                     onDarkModeSelected: () {
                       globalThemeController.setTheme(ThemeOptions.dark);
                     },

@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -12,7 +12,6 @@ abstract class HomeLocalDataSource {
 
 @Injectable(as: HomeLocalDataSource)
 class HomeLocalDataSourceImpl implements HomeLocalDataSource {
-  
   @override
   Future<List<CategoryModel>> getCachedCategories() async {
     await Future.delayed(const Duration(milliseconds: 100));

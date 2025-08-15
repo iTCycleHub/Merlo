@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-abstract class ShakeAnimation<T extends StatefulWidget>
-    extends State<T> with SingleTickerProviderStateMixin {
+abstract class ShakeAnimation<T extends StatefulWidget> extends State<T>
+    with SingleTickerProviderStateMixin {
   ShakeAnimation(this.animationDuration);
   final Duration animationDuration;
   late final animationController =

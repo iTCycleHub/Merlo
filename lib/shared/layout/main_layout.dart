@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -31,10 +31,12 @@ class _MainLayoutState extends State<MainLayout> {
 
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: isDarkMode(context) ? AppColors.kDark : AppColors.kBackground,
+      backgroundColor:
+          isDarkMode(context) ? AppColors.kDark : AppColors.kBackground,
       drawer: const CustomDrawer(),
       appBar: AppBar(
-        backgroundColor: isDarkMode(context) ? AppColors.kDark : AppColors.kBackground,
+        backgroundColor:
+            isDarkMode(context) ? AppColors.kDark : AppColors.kBackground,
         elevation: 0,
         leading: IconButton(
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
@@ -124,7 +126,9 @@ class _MainLayoutState extends State<MainLayout> {
               icon: Container(
                 padding: EdgeInsets.all(8.r),
                 child: SvgPicture.asset(
-                  _currentIndex == 1 ? AppAssets.kActiveOrder : AppAssets.kOrder,
+                  _currentIndex == 1
+                      ? AppAssets.kActiveOrder
+                      : AppAssets.kOrder,
                   height: 22.h,
                   width: 22.w,
                   colorFilter: ColorFilter.mode(
@@ -157,7 +161,9 @@ class _MainLayoutState extends State<MainLayout> {
                   AppAssets.kLiveChat,
                   height: 22.h,
                   width: 22.w,
-                  color: _currentIndex == 3 ? AppColors.kSecondary : AppColors.kHint,
+                  color: _currentIndex == 3
+                      ? AppColors.kSecondary
+                      : AppColors.kHint,
                 ),
               ),
               label: 'Chat',

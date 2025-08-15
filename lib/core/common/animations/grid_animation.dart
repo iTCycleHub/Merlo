@@ -81,4 +81,3 @@ class GridAnimatorWidget extends StatelessWidget {
     return GridAnimator(time: wait(), child: child);
   }
 }
-

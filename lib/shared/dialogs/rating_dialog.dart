@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -11,10 +11,10 @@ import '../../core/utils/app_typography.dart';
 class RatingDialog extends StatelessWidget {
   final Animation<double> opacity;
   final Animation<double> scale;
-  
+
   const RatingDialog({
-    super.key, 
-    required this.opacity, 
+    super.key,
+    required this.opacity,
     required this.scale,
   });
 
@@ -48,8 +48,9 @@ class RatingDialog extends StatelessWidget {
               // Rating field - simplified for now
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(5, (index) =>
-                  Icon(
+                children: List.generate(
+                  5,
+                  (index) => Icon(
                     Icons.star_border,
                     color: AppColors.kSecondary,
                     size: 30.sp,

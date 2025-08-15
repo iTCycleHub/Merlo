@@ -72,8 +72,8 @@ class _AppState extends State<App> {
                   listenable: globalThemeController,
                   builder: (context, child) {
                     return AnimatedTheme(
-                      data: globalThemeController.themeMode == ThemeMode.dark 
-                          ? AppTheme.darkTheme 
+                      data: globalThemeController.themeMode == ThemeMode.dark
+                          ? AppTheme.darkTheme
                           : AppTheme.lightTheme,
                       duration: const Duration(milliseconds: 300),
                       child: MediaQuery(

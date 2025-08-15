@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -11,7 +11,7 @@ final ThemeController globalThemeController = ThemeController();
 // Simple ThemeController for Clean Architecture (without GetX dependency)
 class ThemeController extends ChangeNotifier {
   static String theme = ThemeOptions.light;
-  
+
   ThemeMode get themeMode {
     switch (theme) {
       case 'light':

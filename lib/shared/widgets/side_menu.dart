@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -13,7 +13,7 @@ class SideMenu extends StatelessWidget {
   final String text;
   final String icon;
   final bool isSelected;
-  
+
   const SideMenu({
     super.key,
     this.isSelected = false,

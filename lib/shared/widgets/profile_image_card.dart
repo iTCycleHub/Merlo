@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -12,10 +12,10 @@ import '../../core/utils/app_typography.dart';
 class ProfileImageCard extends StatelessWidget {
   final VoidCallback? onTap;
   final Color? textColor;
-  
+
   const ProfileImageCard({
-    this.textColor, 
-    required this.onTap, 
+    this.textColor,
+    required this.onTap,
     super.key,
   });
 

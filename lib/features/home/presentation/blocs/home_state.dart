@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -22,7 +22,7 @@ class HomeLoading extends HomeState {
 class HomeLoaded extends HomeState {
   final List<Category> categories;
   const HomeLoaded(this.categories);
-  
+
   @override
   List<Object?> get props => [categories];
 }
@@ -30,7 +30,7 @@ class HomeLoaded extends HomeState {
 class HomeError extends HomeState {
   final String message;
   const HomeError(this.message);
-  
+
   @override
   List<Object?> get props => [message];
 }

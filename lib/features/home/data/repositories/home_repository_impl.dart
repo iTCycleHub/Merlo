@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -19,7 +19,8 @@ class HomeRepositoryImpl implements HomeRepository {
   Future<Either<Failure, List<Category>>> getCategories() async {
     try {
       final categoryModels = await _localDataSource.getCachedCategories();
-      final categories = categoryModels.map((model) => model.toEntity()).toList();
+      final categories =
+          categoryModels.map((model) => model.toEntity()).toList();
       return Right(categories);
     } catch (e) {
       return Left(Failure.localFailure(message: 'Error al obtener categorías'));

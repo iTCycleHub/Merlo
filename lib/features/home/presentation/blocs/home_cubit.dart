@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -17,9 +17,9 @@ class HomeCubit extends Cubit<HomeState> {
 
   Future<void> loadCategories() async {
     emit(const HomeLoading());
-    
+
     final result = await _getCategories(NoParams());
-    
+
     result.fold(
       (failure) => emit(HomeError(_getFailureMessage(failure))),
       (categories) => emit(HomeLoaded(categories)),

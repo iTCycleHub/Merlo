@@ -1,4 +1,4 @@
-﻿// Copyright 2025 iTCycle. All rights reserved.
+// Copyright 2025 iTCycle. All rights reserved.
 // Developed by iTCycle
 // Project: Merlo
 
@@ -12,7 +12,7 @@ import '../repositories/home_repository.dart';
 @injectable
 class GetCategories implements UseCase<List<Category>, NoParams> {
   const GetCategories(this._repository);
-  
+
   final HomeRepository _repository;
 
   @override

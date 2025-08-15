@@ -30,7 +30,6 @@ class CardNumberInputFormatter extends TextInputFormatter {
   }
 }
 
-
 class DateInputFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
@@ -62,4 +61,3 @@ class DateInputFormatter extends TextInputFormatter {
     );
   }
 }
-
