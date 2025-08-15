@@ -20,4 +20,5 @@ jobs:
     with:
       flutter_channel: stable
       min_coverage: 0
+      analyze_directories: "lib"
       setup: "flutter pub global activate very_good_cli && export PATH=$PATH:$HOME/.pub-cache/bin && flutter gen-l10n && dart run build_runner build --delete-conflicting-outputs && dart format --line-length 80 lib"
