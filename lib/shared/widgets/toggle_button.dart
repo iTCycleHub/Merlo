@@ -13,11 +13,13 @@ import '../../core/utils/app_typography.dart';
 class ToggleButton extends StatefulWidget {
   final VoidCallback onLightModeSelected;
   final VoidCallback onDarkModeSelected;
+  final bool isDarkMode; // Agregar parámetro para el estado actual
 
   const ToggleButton({
     super.key,
     required this.onLightModeSelected,
     required this.onDarkModeSelected,
+    required this.isDarkMode, // Requerir el estado actual
   });
 
   @override
@@ -39,9 +41,35 @@ class ToggleButtonState extends State<ToggleButton> {
   @override
   void initState() {
     super.initState();
-    xAlign = lightAlign;
-    lightColor = selectedColor;
-    darkColor = normalColor;
+    // Inicializar basándose en el estado actual del tema
+    if (widget.isDarkMode) {
+      xAlign = darkAlign;
+      lightColor = normalColor;
+      darkColor = selectedColor;
+    } else {
+      xAlign = lightAlign;
+      lightColor = selectedColor;
+      darkColor = normalColor;
+    }
+  }
+
+  @override
+  void didUpdateWidget(ToggleButton oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Actualizar si el estado del tema cambió externamente
+    if (oldWidget.isDarkMode != widget.isDarkMode) {
+      setState(() {
+        if (widget.isDarkMode) {
+          xAlign = darkAlign;
+          lightColor = normalColor;
+          darkColor = selectedColor;
+        } else {
+          xAlign = lightAlign;
+          lightColor = selectedColor;
+          darkColor = normalColor;
+        }
+      });
+    }
   }
 
   @override

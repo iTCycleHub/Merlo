@@ -185,6 +185,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 listenable: globalThemeController,
                 builder: (context, child) {
                   return ToggleButton(
+                    isDarkMode: globalThemeController.themeMode == ThemeMode.dark,
                     onDarkModeSelected: () {
                       globalThemeController.setTheme(ThemeOptions.dark);
                     },
